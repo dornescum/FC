@@ -14,10 +14,11 @@ describe('firme cadastru', ()=>{
 	});
 	// fixme nu vede form
 	it.skip('should contain form', function () {
-		cy.get(':nth-child(1) > .form-control');
-		cy.get(':nth-child(1) > .form-control').select("Bucuresti").click({force: true});
-		mainPage.mainForm();
-		cy.get(':nth-child(2) > .form-control')
+		// cy.get('select[name=judet_id]').should('exist');
+		cy.get('[name=judet_id]').select('Alba');
+		// cy.get(':nth-child(1) > .form-control').select("Bucuresti").click({force: true});
+		// mainPage.mainForm();
+		// cy.get(':nth-child(2) > .form-control')
 	});
 	it('should start search', function () {
 		// cy.get('.col-md-2 > .butn').click({force: true});
@@ -31,7 +32,7 @@ describe('firme cadastru', ()=>{
 		cy.get('.page-title-section').should('be.visible')
 		cy.get('.container > .butn').should('be.visible');
 		// fixme nu vede butonul
-		cy.get('.container > .butn').click({force: true});
+		cy.get('.container .butn')[2].click({force:true});
 		cy.go('back');
 	});
 
@@ -50,8 +51,5 @@ describe('firme cadastru', ()=>{
 	it('should contain cookie modal && close it', function () {
 		cy.get('.cc-btn').click();
 	});
-	it('should have links inside website & return home', function () {
-		footer.footerAction();
-		cy.get('.cc-btn').click();
-	});
+
 })
