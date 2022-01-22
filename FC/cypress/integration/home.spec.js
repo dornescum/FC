@@ -47,7 +47,6 @@ describe('firme cadastru', ()=>{
 		cy.get(':nth-child(3) > a > .text-center').click();
 		cy.go('back');
 	});
-
 	it('should contain cookie modal && close it', function () {
 		cy.get('.cc-btn').click();
 	});

@@ -13,7 +13,7 @@ class footerLinks {
 		cy.visit('/');
 		cy.get('.col-center > :nth-child(5) > a').click();
 		cy.visit('/');
-
+// =========
 		cy.get(':nth-child(2) > .col-list > :nth-child(1) > a').click();
 		cy.visit('/');
 		cy.get(':nth-child(2) > .col-list > :nth-child(2) > a').click();

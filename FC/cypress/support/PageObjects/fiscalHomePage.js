@@ -8,4 +8,5 @@ class FiscalHomePage {
 		cy.get('.col-md-2 > .butn').click({force:true})
 	}
 }
+
 export default FiscalHomePage;
