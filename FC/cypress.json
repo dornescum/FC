@@ -1,0 +1,16 @@
+{
+  "baseUrl": "https://firmecadastru.ro",
+  "viewportHeight": 1080,
+  "viewportWidth": 1920,
+  "chromeWebSecurity": false,
+  "ignoreTestFiles": "**/videos/*",
+  "env": {
+    "name": "Mimi",
+    "password": "password",
+    "fax": "123456",
+    "phone": "123456",
+    "email": "email@.com",
+    "message": "just a message"
+  }
+
+}
