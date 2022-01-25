@@ -35,7 +35,7 @@ class footerLinks {
 		cy.get(':nth-child(3) > .col-list > :nth-child(3) > a').click();
 		cy.visit('/');
 		// topo online
-		cy.get(':nth-child(3) > .col-list > :nth-child(4) > a').click();
+		cy.get(':nth-child(3) > .col-list > :nth-child(4) > a').click({force:true});
 		cy.visit('/');
 		// statii permanente gps
 		cy.get(':nth-child(3) > .col-list > :nth-child(5) > a').click();
