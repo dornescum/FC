@@ -12,7 +12,6 @@ describe('firme cadastru', () => {
 	});
 	it('should be visible', function () {
 		cy.viewport('iphone-xr');
-
 		cy.get('.margin-40px-bottom > .card > .align-items-center > .col-md-5').should('be.visible');
 	});
 
@@ -26,13 +25,11 @@ describe('firme cadastru', () => {
 	});
 	it('should have btn info & go back', function () {
 		cy.viewport('iphone-xr');
-
 		cy.get(':nth-child(3) > .card > .align-items-center > .col-md-7 > .card-body > .row > .butn').click({force: true});
 		cy.go('back');
 	});
 	it('should have btn info & go back', function () {
 		cy.viewport('iphone-xr');
-
 		cy.get('.row > :nth-child(1) > .font-size14').click({force: true});
 		cy.go('back');
 		cy.get('.cc-btn').click();
@@ -47,6 +44,7 @@ describe('firme cadastru', () => {
 		district.districtAction(6);
 	});
 	it('should check free for links & return', function () {
+		cy.viewport('iphone-xr');
 		free.freeAction(1);
 		free.freeAction(5);
 		free.freeAction(12);
@@ -61,18 +59,21 @@ describe('firme cadastru', () => {
 
 	});
 	it('should go to company info', function () {
+		cy.viewport('iphone-xr');
 		cy.get(`:nth-child(${1}) > .card > .font-size14`).click({force: true});
 		cy.get('.cc-btn').click();
 		cy.get('.margin-40px-bottom > .card > .align-items-center > .col-md-5 > .card-list-img').click();
 	});
 	it('should have length for iphone & show info', function () {
+		cy.viewport('iphone-xr');
 		cy.get(`:nth-child(${1}) > .card > .font-size14`).click({force: true});
 		cy.get('.cc-btn').click();
 		cy.get('.margin-40px-bottom > .card > .align-items-center > .col-md-5 > .card-list-img').click();
 		cy.get('.surveyorPhoneBtn').should('have.css', 'width', '260px');
 		cy.get('.surveyorPhoneBtn').click();
 	});
-	it.only('should input info in form', function () {
+	it('should input info in form', function () {
+		cy.viewport('iphone-xr');
 		cy.get(`:nth-child(${1}) > .card > .font-size14`).click({force: true});
 		cy.get('.cc-btn').click();
 		cy.get('.margin-40px-bottom > .card > .align-items-center > .col-md-5 > .card-list-img').click();
