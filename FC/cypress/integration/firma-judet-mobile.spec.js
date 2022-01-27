@@ -7,8 +7,8 @@ describe('firme cadastru', () => {
 	const district = new SearchDistrictLinks();
 	const free = new FreeSurveyors();
 	beforeEach(() => {
-		cy.visit('/bucuresti');
 		cy.viewport('iphone-xr');
+		cy.visit('/bucuresti');
 	});
 	it('should be visible', function () {
 		cy.viewport('iphone-xr');

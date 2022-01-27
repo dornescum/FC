@@ -4,8 +4,8 @@
 
 describe('search mobile', () => {
     beforeEach(() => {
-        cy.visit('/');
         cy.viewport('iphone-xr');
+        cy.visit('/');
     });
     it('should be visible search icon', function () {
         cy.viewport('iphone-xr');
